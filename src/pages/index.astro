@@ -1,16 +1,52 @@
 ---
+// Components
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@components/ui/card";
 
+// Styles
+import "@styles/global.css";
+import { CalendarDays } from "lucide-react";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <div class="flex justify-center items-center min-h-screen">
+      <Card>
+        <CardHeader>
+          <CardTitle>ASTRO-SHADCN/UI TEMPLATE</CardTitle>
+          <CardDescription>astro-shadcn Template</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p>Template for Astro with shadcn/ui.</p>
+        </CardContent>
+        <CardFooter>
+          <Button size="sm" className="m-1">
+            <a
+              href="https://docs.astro.build/en/getting-started/"
+              target="_blank">Astro Docs</a
+            >
+          </Button>
+          <Button size="sm">
+            <a href="https://ui.shadcn.com/docs" target="_blank"
+              >shadcn/ui Docs</a
+            >
+          </Button>
+        </CardFooter>
+      </Card>
+    </div>
+  </body>
 </html>
